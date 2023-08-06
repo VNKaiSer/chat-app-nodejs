@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors({ origin: true }));
 
 app.post("/auth", async (req, res) => {
-    const { username, password } = req.body;
+    const { username } = req.body;
     return res.json({ username: username, secret: "sha256..." });
 });
 
