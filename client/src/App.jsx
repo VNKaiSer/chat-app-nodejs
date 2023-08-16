@@ -5,11 +5,10 @@ import './App.css'
 import AuthPage from './components/AuthPage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [user, setUser] = useState(undefined)
   return (
     <>
-      <AuthPage />
+      <AuthPage onAuth={(user) => { setUser(user) }} />
     </>
   )
 }
